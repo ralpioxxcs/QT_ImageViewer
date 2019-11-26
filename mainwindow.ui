@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>558</height>
+    <width>467</width>
+    <height>1234</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,20 +59,42 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Zoom Out</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>20</y>
+      <x>200</x>
+      <y>10</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Zoom In</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>401</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="backgroundBrush">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>240</red>
+       <green>16</green>
+       <blue>0</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="dragMode">
+     <enum>QGraphicsView::RubberBandDrag</enum>
     </property>
    </widget>
   </widget>
@@ -81,7 +103,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>606</width>
+     <width>467</width>
      <height>21</height>
     </rect>
    </property>

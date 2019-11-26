@@ -3,7 +3,10 @@
 
 #include <QMainWindow>
 #include <QScrollArea>
+#include <QDebug>
+#include <QScrollBar>
 #include <iostream>
+
 #include "myqlabel.h"
 
 namespace Ui {
@@ -19,6 +22,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void mosueReleased();
+    void mousePressed();
     void mouseMoved();
     void mouseWheel();
 
@@ -33,6 +38,12 @@ private:
     Ui::MainWindow *ui;
     QScrollArea *m_scroller;
     double m_scaleImage;
+
+    QPoint m_startPt;
+
+
+    QPoint m_startScrollPt;
+    QPoint m_currentScrollPt;
 };
 
 #endif // MAINWINDOW_H
