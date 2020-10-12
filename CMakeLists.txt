@@ -10,20 +10,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
-
 
 message(status "found : ${Qt5Widgets_FOUND}")
 message(status "found lib : Qt5::Widgets")
 set(QT5_LIB ${Qt5Widgets_LIBRARIES})
 set(QT5_INCLUDE_DIR ${Qt5Widgets_INCLUDE_DIRS})
 
-find_package(
-    OpenCV
-)
+find_package(OpenCV)
 find_package(Boost COMPONENTS system log)
-
 
 include_directories(${QT5_INCLUDE_DIR})
 include_directories(${OpenCV_INCLUDE_DIRS})
