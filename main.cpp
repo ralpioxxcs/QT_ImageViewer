@@ -1,11 +1,11 @@
-#include "mainwindow.h"
+#include "zoomDialog.h"
+
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    ZoomDialog w;
     w.show();
-
     return a.exec();
 }
