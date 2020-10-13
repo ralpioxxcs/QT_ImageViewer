@@ -12,12 +12,12 @@ RUN git clone https://github.com/ralpioxxcs/QT_ImageViewer.git \
     && cd QT_ImageViewer \
     && cmake -H. -BRelease \ 
     && cd Release \
-    && cmake --build .
-
+    && cmake --build . --config Release
 # clean
 WORKDIR /
 RUN apt-get autoclean autoremove
 RUN rm -rf /var/lib/apt/lists/*
 
 # default command.
-CMD ["bash"]
+WORKDIR /project/QT_ImageViewer/Release
+CMD ["./imgviewer"]
